@@ -1,0 +1,116 @@
+@use "../variables";
+@use "../mixins";
+
+.type-large-title,
+%type-large-title {
+  @include mixins.typography-scale(
+    variables.$font-family-display,
+    34pt,
+    41pt,
+    0.4pt
+  );
+}
+
+.type-title-1,
+%type-title-1 {
+  @include mixins.typography-scale(
+    variables.$font-family-display,
+    28pt,
+    34pt,
+    0.38pt,
+    variables.$font-weight-bold
+  );
+}
+
+.type-title-2,
+%type-title-2 {
+  @include mixins.typography-scale(
+    variables.$font-family-display,
+    22pt,
+    28pt,
+    -0.26pt
+  );
+}
+
+.type-title-3,
+%type-title-3 {
+  @include mixins.typography-scale(
+    variables.$font-family-display,
+    20pt,
+    25pt,
+    -0.45pt
+  );
+}
+
+.type-headline,
+%type-headline {
+  @include mixins.typography-scale(
+    variables.$font-family-text,
+    17pt,
+    22pt,
+    -0.43pt,
+    variables.$font-weight-semi-bold
+  );
+}
+
+.type-body,
+%type-body {
+  @include mixins.typography-scale(
+    variables.$font-family-text,
+    17pt,
+    22pt,
+    -0.43pt
+  );
+}
+
+.type-body-bold,
+%type-body-bold {
+  @extend %type-body;
+
+  font-weight: variables.$font-weight-bold;
+}
+
+.type-callout,
+%type-callout {
+  @include mixins.typography-scale(
+    variables.$font-family-text,
+    16pt,
+    21pt,
+    -0.31pt
+  );
+}
+
+.type-sub-headline,
+%type-sub-headline {
+  @include mixins.typography-scale(
+    variables.$font-family-text,
+    15pt,
+    20pt,
+    -0.23pt
+  );
+}
+
+.type-footnote,
+%type-footnote {
+  @include mixins.typography-scale(
+    variables.$font-family-text,
+    13pt,
+    18pt,
+    -0.08pt
+  );
+}
+
+.type-caption-1,
+%type-caption-1 {
+  @include mixins.typography-scale(variables.$font-family-text, 12pt, 16pt, 0);
+}
+
+.type-caption-2,
+%type-caption-2 {
+  @include mixins.typography-scale(
+    variables.$font-family-text,
+    11pt,
+    13pt,
+    0.06pt
+  );
+}

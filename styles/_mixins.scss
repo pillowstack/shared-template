@@ -1,0 +1,32 @@
+@use "variables";
+
+// Disallow element dragging
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@mixin no-drag {
+  -webkit-user-drag: none;
+}
+
+// Disallow profile to select an text
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@mixin no-select {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+// Typography scale helper
+// Reduces duplication across type scale files
+// Example:
+// @include typography-scale(variables.$font-family-display, 32pt, 39pt, 0.41pt);
+@mixin typography-scale(
+  $family,
+  $font-size,
+  $line-height,
+  $letter-spacing,
+  $weight: variables.$font-weight-regular
+) {
+  font-family: $family;
+  font-size: $font-size;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+}
